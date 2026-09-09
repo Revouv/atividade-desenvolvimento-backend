@@ -25,7 +25,6 @@ async def _handle_unexpected_error(_: Request, exc: Exception):
 
 
 def register_exception_handlers(app: FastAPI) -> None:
-    """Registra todos os manipuladores na aplicação."""
     app.add_exception_handler(DomainError, _handle_domain_error)
     app.add_exception_handler(RequestValidationError, _handle_validation_error)
     app.add_exception_handler(StarletteHTTPException, _handle_http_exception)

@@ -1,5 +1,3 @@
-"""Regras de negócio da entidade Course."""
-
 from app.exceptions import NotFoundError
 from app.models import Course
 from app.repositories.course_repository import CourseRepository

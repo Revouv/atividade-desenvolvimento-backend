@@ -1,5 +1,3 @@
-"""Regras de negócio da entidade Enrollment (matrícula)."""
-
 from app.exceptions import ConflictError, NotFoundError
 from app.models import Enrollment
 from app.repositories.course_repository import CourseRepository

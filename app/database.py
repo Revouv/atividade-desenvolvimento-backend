@@ -14,7 +14,7 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, expire_on_commit=False
 
 
 class Base(DeclarativeBase):
-    """Classe base declarativa para todos os modelos ORM."""
+    pass
 
 
 def get_session() -> Generator[Session, None, None]:

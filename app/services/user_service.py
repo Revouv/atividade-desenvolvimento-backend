@@ -1,5 +1,3 @@
-"""Regras de negócio da entidade User."""
-
 from app.exceptions import ConflictError, NotFoundError
 from app.models import User
 from app.repositories.user_repository import UserRepository
@@ -44,7 +42,6 @@ class UserService:
     def _ensure_email_is_available(
         self, email: str, current_user_id: int | None = None
     ) -> None:
-        """Garante que o e-mail não pertence a outro usuário."""
         existing = self.repository.get_by_email(email)
         if existing is not None and existing.id != current_user_id:
             raise ConflictError("E-mail já cadastrado")
